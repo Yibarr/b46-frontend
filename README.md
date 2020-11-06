@@ -1,4 +1,4 @@
-# b46-Backend
+# b46-Frontend
 
 Repositorio con el proyecto de frontend del batch 46 de Cinta Negra.
 
