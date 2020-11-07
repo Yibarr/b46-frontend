@@ -1,39 +1,19 @@
 import React from 'react'
 import {
-  Message,
-  PriceList,
-  Form,
-} from '../src/components/index.js'
+  BrowserRouter as Router
+} from 'react-router-dom'
 
-const prices = [
-  { item: 'Shampoo', price: 78 },
-  { item: 'Roast beef', price: 269 },
-  { item: 'Playstation 5', price: 12000 },
-  { item: 'Kawamon', price: 34 },
-  { item: 'Shoes', price: 1599 },
-]
+import Routes from './Routes.js'
 
-function App() {
-  return (
+const App = () => {
+  return(
     <React.Fragment>
-      <header>
-        <h1> Hola a todos al el app</h1>
-      </header>
-      <main>
-        <div>
-          <Message msg={ 'Hasta la vista, baby.' } />
-          <Message msg={ 'Nos vemos en el infierno, Jhonny' } />
-          <Message msg={ 'Papaya' } />
-        </div>
-        <div>
-          <PriceList prices={prices} />
-        </div>
-        <div>
-          <Form/>
-        </div>
-      </main>
+      <Router>
+        <h1>Aquí va el navbar</h1>
+        { Routes }
+      </Router>
     </React.Fragment>
-  );
+  )
 }
 
-export default App;
+export default  App
