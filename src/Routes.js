@@ -2,6 +2,8 @@ import React from 'react'
 import {
   Home,
   Example,
+  Signup,
+  NotFound,
 } from './pages/index.js'
 
 import {
@@ -18,6 +20,13 @@ export default (
     <Route
       exact path='/example'
       component={ Example }
+    />
+    <Route
+      exact path='/signup'
+      component={ Signup }
+    />
+    <Route
+      component={ NotFound }
     />
   </Switch>
 )

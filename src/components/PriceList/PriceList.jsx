@@ -1,7 +1,4 @@
 import React from 'react'
-import {
-  priceFormat
-} from '../../pipes/index.js'
 
 const PriceList = ({ prices }) => {
   return (
@@ -20,5 +17,10 @@ const PriceList = ({ prices }) => {
     </React.Fragment>
   )
 }
+
+const priceFormat = (payload) => {
+  return `$${new Intl.NumberFormat().format(payload)}`
+}
+
 export default PriceList
 
