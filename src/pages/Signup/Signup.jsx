@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { Redirect } from 'react-router-dom'
+import { AuthContext } from '../../context/AuthContext.js'
 import { auth } from '../../utils/https.js'
 
 const Signup = () => {
+  const { isAuth } = useContext(AuthContext)
   const [ first_name, setFirstName ] = useState('')
   const [ last_name, setLastName ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ birth_date, setBirthDate ] = useState('')
   const [ password, setPassword ] = useState('')
   const [profile_img, setPorfileImg] = useState('')
+  const [ redirect, setRedirect ] = useState(false)
   
   const handleForm = async (e) => {
     try {
@@ -15,13 +19,13 @@ const Signup = () => {
       const body = {
         first_name,
         last_name,
+        profile_img,
         email,
         birth_date,
         password
       }
-
       await auth.signup(body)
-
+      setRedirect(true)
     } catch (error) {
      console.log(error) 
     }
@@ -115,6 +119,7 @@ const Signup = () => {
           </form>
         </div>
       </div>
+      { redirect || isAuth ? <Redirect to="/login"/> : null}
     </React.Fragment>
   )
 }

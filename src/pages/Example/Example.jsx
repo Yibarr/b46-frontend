@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Message,
   PriceList,
+  Effect,
   Form,
 } from '../../components/index.js'
 
@@ -22,6 +23,7 @@ const Example = () => {
     <React.Fragment>
       <header>
         <h1> Hola a todos al el app</h1>
+        <Effect/>
       </header>
       <main>
         <div>

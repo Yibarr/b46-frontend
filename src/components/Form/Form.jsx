@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Form = () => {
-  console.log('Se ha creado el componente')
   const [title, setTitle] = useState('Título')
   const [subtitle, setSubtitle] = useState('Subtítulo')
-  
+  useEffect(() => {
+    console.log('Solo cuando inicia')
+  }, [])
+
+  useEffect(() => {
+  console.log('Efecto en título o subtítulo')
+  }, [subtitle, title])
+
   const handleTitle = (e) => {
     setTitle(e.target.value)
   } 
