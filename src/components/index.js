@@ -1,4 +1,5 @@
 export { default as PrivateRoute } from './PrivateRoute/PrivateRoute.jsx' 
+export { default as PostCreator } from './PostCreator/PostCreator.jsx'
 export { default as Message } from './Message/Message.jsx'
 export { default as Effect } from './Effect/Effect.jsx'
 export { default as PriceList } from './PriceList/PriceList.jsx'

@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Home,
+  Profile,
   Example,
   Signup,
   Login,
@@ -31,6 +32,10 @@ export default (
     <Route
       exact path='/login'
       component={ Login }
+    />
+    <PrivateRoute
+      exact path="/profile/:id"
+      component={ Profile }
     />
     <PrivateRoute
       exact path='/example'

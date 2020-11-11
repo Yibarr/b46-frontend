@@ -1,0 +1,12 @@
+.photify-profile-picture {
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.photify-profile-header {
+  background-color: rgba(255, 255, 255, 0.685);
+  display: flex;
+  justify-content: center;
+}
